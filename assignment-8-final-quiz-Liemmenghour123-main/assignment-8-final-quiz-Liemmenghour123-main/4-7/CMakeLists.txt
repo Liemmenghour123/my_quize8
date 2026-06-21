@@ -8,38 +8,18 @@ project(final_quiz_score
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
+# TODO: src/score.c로 score 정적 라이브러리를 만든다.
 
-add_library(score STATIC src/score.c)
+# TODO: include/ 디렉터리를 score 라이브러리의 헤더 경로로 등록한다.
 
-target_include_directories(score
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
+# TODO: src/main.c로 score-analyzer 실행 파일을 만든다.
 
+# TODO: score-analyzer가 score 라이브러리를 사용하도록 연결한다.
 
-add_executable(score-analyzer src/main.c)
+# TODO: sample/CMakeLists.txt를 참고해 GoogleTest를 가져오고 테스트를 켠다.
 
-target_link_libraries(score-analyzer
-    PRIVATE score
-)
+# TODO: 빌드 디렉터리에 data/ 디렉터리를 복사한다.
 
+# TODO: tests/CMakeLists.txt가 사용되도록 tests 하위 디렉터리를 추가한다. 
 
-include(FetchContent)
-
-FetchContent_Declare(
-    googletest
-    URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
-)
-
-
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-
-FetchContent_MakeAvailable(googletest)
-
-enable_testing()
-
-
-add_subdirectory(tests)
-
-
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/data
-     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+_____
