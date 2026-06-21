@@ -1,0 +1,5 @@
+kim 60
+lee 70
+park 80
+choi 90
+

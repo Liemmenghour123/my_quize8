@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -u
+
+mode="${FINAL_QUIZ_MODE:-unset}"
+report_name="${FINAL_REPORT_NAME:-unset}"
+score_limit="${FINAL_SCORE_LIMIT:-unset}"
+data_file="${FINAL_DATA_FILE:-unset}"
+
+status="missing"
+if [[ "$mode" == "final" && "$report_name" == "env-result" && "$score_limit" == "80" && "$data_file" == "data/scores.txt" && -f "$data_file" ]]; then
+  status="ready"
+fi
+
+mkdir -p reports
+
+{
+  printf 'env_status=%s\n' "$status"
+  printf 'quiz_mode=%s\n' "$mode"
+  printf 'report_name=%s\n' "$report_name"
+  printf 'score_limit=%s\n' "$score_limit"
+  printf 'data_file=%s\n' "$data_file"
+} > "reports/${report_name}.txt"
+
+cat "reports/${report_name}.txt"

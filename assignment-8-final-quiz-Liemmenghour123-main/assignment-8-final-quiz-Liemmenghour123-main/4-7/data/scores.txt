@@ -1,0 +1,6 @@
+kim 72
+lee 81
+park 95
+choi 88
+jung 76
+

@@ -1,0 +1,12 @@
+Starting program:  --gtest_filter=Requirement.CountIncludesScoresEqualToLimit
+No executable file specified.
+Use the "file" or "exec-file" command.
+No symbol table is loaded.  Use the "file" command.
+Breakpoint 1 (score_count_under_limit) pending.
+Starting program:  --gtest_filter=Requirement.CountIncludesScoresEqualToLimit
+No executable file specified.
+Use the "file" or "exec-file" command.
+No symbol table is loaded.  Use the "file" command.
+Starting program:  --gtest_filter=Requirement.CountIncludesScoresEqualToLimit
+No executable file specified.
+Use the "file" or "exec-file" command.

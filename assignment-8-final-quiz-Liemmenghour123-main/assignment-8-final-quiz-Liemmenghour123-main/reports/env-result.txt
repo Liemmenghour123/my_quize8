@@ -1,0 +1,5 @@
+env_status=ready
+quiz_mode=final
+report_name=env-result
+score_limit=80
+data_file=data/scores.txt

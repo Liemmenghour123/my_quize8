@@ -1,0 +1,6 @@
+dynamic score report
+limit: 80
+student count: 5
+matched count: 2
+sum of scores <= 80: 148
+average of scores <= 80: 74.00
